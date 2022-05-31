@@ -104,9 +104,9 @@
 #
 # # не забываем оставить пустую строку в конце файла
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# import time
 
 # try:
 #     browser = webdriver.Chrome()
