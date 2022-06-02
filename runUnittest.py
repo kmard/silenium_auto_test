@@ -21,7 +21,8 @@ def runRegistration(link, self, numberPage):
         if numberPage == 1:
             phone_field = browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your phone:"]').send_keys('+7900000000')
         else:
-            phone_field = browser.find_element(By.XPATH, "//button['Submit']").send_keys('+7900000000')
+            # for next pages
+            phone_field = browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your phone:"]').send_keys('+7900000000')
             # time.sleep(100)
 
         # button registration
