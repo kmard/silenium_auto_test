@@ -21,7 +21,8 @@ def runRegistration(link, self, numberPage):
         if numberPage == 1:
             phone_field = browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your phone:"]').send_keys('+7900000000')
         else:
-             pass
+            phone_field = browser.find_element(By.XPATH, "//button['Submit']").send_keys('+7900000000')
+            # time.sleep(100)
 
         # button registration
         button = browser.find_element(By.CSS_SELECTOR, "button.btn").click()
@@ -45,7 +46,7 @@ class TestFourPages(unittest.TestCase):
 
     # name mast start with Test
     def testSecondPage(self):
-        print('testSecondPag')
+        runRegistration('http://suninjuly.github.io/registration2.html',self,2)
 
 
 if __name__ == '__main__':
