@@ -6,7 +6,8 @@ from selenium.webdriver.common.by import By
 
 
 class Test_launch_Two_Page(unittest.TestCase):
-    def test_1_6_UnicSelect(self):
+
+    def test1_6_UnicSelect(self):
 
         link = "https://suninjuly.github.io/registration1.html"
         browser = webdriver.Chrome()
@@ -35,7 +36,7 @@ class Test_launch_Two_Page(unittest.TestCase):
 
         # Проверяем, что смогли зарегистрироваться
         # ждем загрузки страницы
-        time.sleep(1)
+        # time.sleep(1)
 
         # находим элемент, содержащий текст
         welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
@@ -50,9 +51,9 @@ class Test_launch_Two_Page(unittest.TestCase):
         # time.sleep(10)
         # закрываем браузер после всех манипуляций
         browser.quit()
-        self.test_1_6_UnicSelect_2()
+        # self.test_1_6_UnicSelect_2()
 
-    def test_1_6_UnicSelect_2(self):
+    def test1_6_UnicSelect_2(self):
 
         link = "https://suninjuly.github.io/registration2.html"
         browser = webdriver.Chrome()
