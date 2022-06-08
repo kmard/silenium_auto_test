@@ -1,5 +1,4 @@
 from base_page import BasePage
-from locators import MainPageLocators
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import  NoAlertPresentException
 from math import log,sin
@@ -11,7 +10,6 @@ class MainPage(BasePage):
         batton_backet.click()
 
     def solve_quiz_and_get_code(self):
-        # field_enter = self.browser.find_element(By.CSS_SELECTOR, '[value="Добавить в корзину"]')
         alert = self.browser.switch_to.alert
         alert_text = alert.text
         x = alert.text.split(" ")[2]

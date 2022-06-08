@@ -5,6 +5,7 @@ from init_backet import *
 
 def test_guest_can_go_to_backet_page(browser):
     link = "https://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+    # link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
 
     page = MainPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
     page.open()                       # открываем страницу
