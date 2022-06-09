@@ -1,4 +1,4 @@
-
+import pytest
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import  NoAlertPresentException
 from math import log,sin
@@ -10,7 +10,8 @@ class MainPage(BasePage):
         batton_backet = self.browser.find_element(By.CSS_SELECTOR, '[value="Добавить в корзину"]')
         batton_backet.click()
 
-    def should_be_present_in_cart(self) -> None:
+    @pytest.mark.xfail
+    def should_be_present_in_cart(self):
 
         assert self.is_element_present(
             By.CSS_SELECTOR, "div.alertinner"
