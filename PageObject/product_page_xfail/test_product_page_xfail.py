@@ -1,0 +1,15 @@
+
+from main_page_backet_xfail import MainPage
+from init_backet_xfail import *
+
+
+
+def test_guest_can_go_to_backet_page(browser):
+    # link = "https://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+
+    page = MainPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
+    page.open()                       # открываем страницу
+    page.add_to_backed()             # выполняем метод страницы - add to backet
+    page.solve_quiz_and_get_code()    # work with modal window
+    page.should_be_present_in_cart() #!!
