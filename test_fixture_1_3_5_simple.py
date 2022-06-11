@@ -3,10 +3,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 link = "http://selenium1py.pythonanywhere.com/"
-#(venv) PS C:\Projects_Python\silenium_auto_test> pytest -s test_fixture_1_3_5_simple.py
+
 
 @pytest.fixture
 def browser():
+    """
+    docs https://docs.pytest.org/en/latest/reference/reference.html?highlight=fixture#pytest.fixture
+    (venv) PS C:\Projects_Python\silenium_auto_test> pytest -s -v test_fixture_1_3_5_simple.py
+    :return:
+    instanse browser
+    """
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
     return browser
