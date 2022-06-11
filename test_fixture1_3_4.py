@@ -2,10 +2,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 link = "http://selenium1py.pythonanywhere.com/"
 
-#(venv) PS C:\Projects_Python\silenium_auto_test> pytest -s test_fixture1_3_4.py
-
-
 class TestMainPage1():
+    """
+    documentation https://docs.pytest.org/en/latest/how-to/xunit_setup.html?highlight=teardown
+    run for command line example :(venv) PS C:\Projects_Python\silenium_auto_test> pytest -s test_fixture1_3_4.py
+    """
 
     @classmethod
     def setup_class(self):
