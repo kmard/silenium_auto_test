@@ -21,6 +21,8 @@ def browser():
     # regression: marker for regression tests
     # win10
     #
+    #чтобы пропустить тест, его отмечают в коде как @pytest.mark.skip Эти метки не требуют дополнительного объявления в pytest.ini.
+    #
     #(venv) PS C:\Projects_Python\silenium_auto_test> pytest -s -v -m smoke test_fixture_1_3_5_marks_part2.py
     #(venv) PS C:\Projects_Python\silenium_auto_test> pytest -s -v -m "smoke or regression"  test_fixture_1_3_5_marks_part2.py
     #(venv) PS C:\Projects_Python\silenium_auto_test> pytest -s -v -m "smoke and win10"  test_fixture_1_3_5_marks_part2.py
@@ -67,5 +69,12 @@ class TestMainPage1():
     @pytest.mark.regression
     def test_guest_should_see_basket_link_on_the_main_page(self, browser):
         print('\n!!!pytest.mark.regression')
+        browser.get(link)
+        browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
+
+    # @pytest.mark.skip
+    @pytest.mark.regression
+    def test_guest_should_see_basket_link_on_the_main_page1(self, browser):
+        print('\n!!!pytest.mark.skip')
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
