@@ -5,3 +5,42 @@ https://docs.pytest.org/en/stable/how-to/usage.html#modifying-python-traceback-p
 
 //driver chrom
 https://sites.google.com/chromium.org/driver/downloads
+
+//Css
+https://suninjuly.github.io/blog_example.html
+<div id="post2" class="item">
+    <div class="title second">After bathing</div>
+    <img src="./images/bad_dog.jpg">
+</div>
+#post2 .title
+#post2 > div.title
+#posts > .item:nth-child(2) > .title
+Псевдо-класс :nth-child(2) — позволяет найти второй по порядку элемент среди дочерних элементов для #posts.
+Затем с помощью конструкции > .title мы указываем, что нам нужен элемент .title,
+родителем которого является найденный ранее элемент .item.
+
+find_element(By.ID, value) — поиск по уникальному атрибуту id элемента.
+     input4 = browser.find_element(By.ID,'country')
+     input4.send_keys("Test")
+
+find_element(By.CSS_SELECTOR, value) — поиск элемента с помощью правил на основе CSS.
+     radiobutton = browser.find_element(by=By.CSS_SELECTOR,value='[id="robotsRule"]')
+     radiobutton.click()
+     find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
+
+find_element(By.XPATH, value) — поиск с помощью языка запросов XPath,
+     email = browser.find_element(By.XPATH,'/html/body/div/form/div[1]/div[3]/input')
+     email.send_keys('email@google.com')
+find_element(By.NAME, value) — поиск по атрибуту name элемента;
+     input1 = browser.find_element(By.NAME,'first_name')
+     input1.send_keys("Ivan")
+
+find_element(By.TAG_NAME, value) — поиск элемента по названию тега элемента;
+     find_element(By.TAG_NAME, "select").click()
+
+find_element(By.CLASS_NAME, value) — поиск по значению атрибута class;
+      find_element(By.CLASS_NAME, value='btn.btn-default')
+
+find_element(By.LINK_TEXT, value) — поиск ссылки на странице по полному совпадению;
+
+find_element(By.PARTIAL_LINK_TEXT, value)
