@@ -58,11 +58,11 @@ class Snake(Canvas):
         self.pack()
 
     def loadResources(self):
-        self.headImage = Image.open(r'C:\Projects_Python\Rusak\snake\head.png')
+        self.headImage = Image.open(r'/head.png')
 
         self.head = ImageTk.PhotoImage(self.headImage.resize((BODYSIZE, BODYSIZE), Image.ANTIALIAS))
-        self.body = ImageTk.PhotoImage(Image.open(r'C:\Projects_Python\Rusak\snake\body.png').resize((BODYSIZE, BODYSIZE), Image.ANTIALIAS))
-        self.apple = ImageTk.PhotoImage(Image.open(r'C:\Projects_Python\Rusak\snake\apple.png').resize((BODYSIZE, BODYSIZE), Image.ANTIALIAS))
+        self.body = ImageTk.PhotoImage(Image.open(r'/body.png').resize((BODYSIZE, BODYSIZE), Image.ANTIALIAS))
+        self.apple = ImageTk.PhotoImage(Image.open(r'/apple.png').resize((BODYSIZE, BODYSIZE), Image.ANTIALIAS))
 
 
     def beginplay(self):
