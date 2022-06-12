@@ -6,7 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import math
 
-
+#документация по выводу данных в консоль вывода
+# https://docs.pytest.org/en/stable/how-to/usage.html#modifying-python-traceback-printing
 
 @pytest.fixture
 def browser():
