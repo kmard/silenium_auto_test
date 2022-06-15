@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 try:
 
@@ -16,9 +18,9 @@ try:
     list = Select(browser.find_element(By.CSS_SELECTOR, '[id="dropdown"]'))
     list.select_by_value(str(sum))             #select_by_visible_text()
 
-    time.sleep(1)
+    # time.sleep(1)
 
-    buttonOk = browser.find_element(By.CSS_SELECTOR, "button.btn")
+    buttonOk = WebDriverWait(browser,3).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.btn")))
     buttonOk.click()
 
     #щем алерт
