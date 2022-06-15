@@ -14,7 +14,7 @@ try:
     sum = int(num1)+int(num2)
 
     list = Select(browser.find_element(By.CSS_SELECTOR, '[id="dropdown"]'))
-    list.select_by_value(str(sum))            #select_by_visible_text()
+    list.select_by_value(str(sum))             #select_by_visible_text()
 
     time.sleep(1)
 
