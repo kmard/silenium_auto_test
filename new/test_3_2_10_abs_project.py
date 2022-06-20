@@ -1,5 +1,6 @@
 
 # python test_3_2_10_abs_project.py
+# pytest test_3_2_10_abs_project.py
 
 
 def test_abs1():

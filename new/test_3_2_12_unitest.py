@@ -1,5 +1,6 @@
 
 # python test_3_2_12_unitest.py
+# pytest test_3_2_12_unitest.py
 
 
 import unittest
