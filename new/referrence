@@ -103,3 +103,6 @@ https://habr.com/ru/post/448786/
 
 //How to use skip and xfail to deal with tests that cannot succeed
 https://pytest.org/en/stable/how-to/skipping.html
+
+//Параметризация тестов
+https://docs.pytest.org/en/latest/how-to/parametrize.html?highlight=parametrize
