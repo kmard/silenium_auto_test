@@ -1,6 +1,6 @@
 
-# pytest -v --tb=line --language=en test_main_page_PageObject_4_1_6.py
-#pytest -v --tb=line --language=ru test_main_page_PageObject_4_1_6.py
+# pytest -v --tb=line --language=en test_main_page_PageObject_4_1_7.py
+#pytest -v --tb=line --language=ru test_main_page_PageObject_4_1_7.py
 
 from selenium.webdriver.common.by import By
 
