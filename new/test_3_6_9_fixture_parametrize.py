@@ -1,5 +1,6 @@
 
 # pytest --language=es test_3_6_9_fixture_parametrize.py
+# param language
 import time
 
 def test_find_add_to_card_btn(browser):
