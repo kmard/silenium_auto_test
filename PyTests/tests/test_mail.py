@@ -4,9 +4,9 @@ import pytest
 
 @pytest.fixture()
 def set_up():
-    print('\nConnect')
+    print('\nConnect ')
     yield
-    print('\nDisconnect')
+    print('\nDisconnect ')
 
 def test_sebding_mail_1(set_up):
     print('letter sended_1')
